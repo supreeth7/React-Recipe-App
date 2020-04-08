@@ -1,11 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 const App = () => {
+  const ex_req = `https://api.edamam.com/search?q=chicken&app_id=${process.env.REACT_APP_APP_ID}&app_key=${process.env.REACT_APP_APP_KEY}`;
+
   return (
-    <div>
-      <h1>Hellow React!</h1>
+    <div className="App">
+      <form className="search-form">
+        <input type="text" className="search-bar" />
+        <button type="submit" className="search-btn"></button>
+      </form>
     </div>
   );
 };
